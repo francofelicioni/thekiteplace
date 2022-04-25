@@ -10,7 +10,7 @@ const ItemListContainer = () => {
 
     //componentDidUpdate
     useEffect(() => {
-        customFetch(1000, products.filter(item => {
+        customFetch(500, products.filter(item => {
             if (idCategory === undefined) return item;
             return item.categoryId === parseInt(idCategory)
         }))
@@ -32,4 +32,4 @@ const ItemListContainer = () => {
     );
 }
 
-export default ItemListContainer;
+export default ItemListContainer; 

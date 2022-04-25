@@ -1,4 +1,4 @@
-/* import { createContext, useState } from "react";
+import { createContext, useState } from "react";
 
 export const CartContext = createContext();
 
@@ -7,7 +7,7 @@ const CartContextProvider = ({ children }) => {
 
     const addToCart = (item, qty) => {
         let found = cartList.find(product => product.idItem === item.id);
-        if ( found === undefined) {
+        if (found === undefined) {
             setCartList([
                 ...cartList,
                 {
@@ -25,52 +25,6 @@ const CartContextProvider = ({ children }) => {
     }
     
     const removeList = () => {
-        setCartList([]);
-    }
-
-    const deleteItem = (id) => {
-        let result = cartList.filter(item => item.idItem != id);
-        setCartList(result);
-    }
-
-
-    return (
-        <CartContext.Provider value={{cartList, addToCart, removeList, deleteItem}}>
-            { children }
-        </CartContext.Provider>
-    );
-}
-
-export default CartContextProvider; */
-
-import { createContext, useState } from "react";
-
-// Creacion del contexto
-export const CartContext = createContext();
-
-const CartContextProvider = ({children}) => {
-
-    const [cartList, setCartList] = useState([]);
-
-    const addToCart =(item, qty) => {
-        let found = cartList.find (item=>item.idItem===item.id);
-        if (found ===undefined) {
-            setCartList([
-                ...cartList,
-                {
-                    idItem: item.id,
-                    imgItem: item.image[0],
-                    nameItem: item.name,
-                    costItem: item.cost,
-                    qtyItem: qty
-                }
-            ]);
-        } else {
-            found.qtyItem += qty;
-        }
-    }
-
-    const removeList =()=>{
         setCartList([]);
     }
 
@@ -102,7 +56,7 @@ const CartContextProvider = ({children}) => {
         return qtys.reduce(((previousValue, currentValue) => previousValue + currentValue), 0);
     }
 
-    return(
+    return (
         <CartContext.Provider value={{
             cartList, 
             addToCart, 
@@ -114,9 +68,9 @@ const CartContextProvider = ({children}) => {
             calcTotal,
             calcItemsQty
         }}>
-            {children}
+            { children }
         </CartContext.Provider>
-    )
+    );
 }
 
 export default CartContextProvider;
