@@ -4,6 +4,22 @@ import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
 import { DetailContainer, WrapperDetail, ImgContainer, ImageDetail, InfoContainer, Title, Desc, Price } from './styledComponents';
 import { CartContext } from './CartContext';
+import styled from "styled-components";
+
+
+const Container = styled.div`
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+`;
+const ContainerPpal = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding:50px;
+`;
+
 
 const ItemDetail = ({ item }) => {
     const [itemCount, setItemCount] = useState(0);
@@ -23,7 +39,7 @@ const ItemDetail = ({ item }) => {
             <DetailContainer>
                 <WrapperDetail>
                     <ImgContainer>
-                        <ImageDetail src={item.image[0]} />
+                        <ImageDetail src={item.image} />
                     </ImgContainer>
                     <InfoContainer>
                         <Title>{item.name}</Title>

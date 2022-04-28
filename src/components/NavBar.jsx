@@ -8,12 +8,12 @@ const NavBar = () => {
         <AppBar position="relative">
             <Wrapper>
                 <Left>
-                    <Link to='/' style={{textDecoration: "none", color: "white"}}><Logo>The Kite Place</Logo></Link>
+                    <Link to='/' style={{textDecoration: "none", color: "white"}}><img style={{height:70, width:200}} src="https://firebasestorage.googleapis.com/v0/b/kiteplace.appspot.com/o/logo.png?alt=media&token=61cc2e18-278c-4a80-83cc-a0362e3b04e4" alt="Logo" /></Link>
                 </Left>
                 <Center>
-                    <Link to='/category/1' style={{textDecoration: "none", color: "white"}}><MenuItem>KITES</MenuItem></Link>
-                    <Link to='/category/2' style={{textDecoration: "none", color: "white"}}><MenuItem>BOARDS</MenuItem></Link>
-                    <Link to='/category/3' style={{textDecoration: "none", color: "white"}}><MenuItem>FOILS</MenuItem></Link>                    
+                    <Link to='/category/1' style={{textDecoration: "none", color: "white"}}><MenuItem>Kites</MenuItem></Link>
+                    <Link to='/category/2' style={{textDecoration: "none", color: "white"}}><MenuItem>Boards</MenuItem></Link>
+                    <Link to='/category/3' style={{textDecoration: "none", color: "white"}}><MenuItem>Foils</MenuItem></Link>                    
                 </Center>
                 <Right>
                     <MenuItem><Link to='/cart' style={{textDecoration: "none", color: "white"}}><CartWidget /></Link></MenuItem>

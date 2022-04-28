@@ -3,10 +3,11 @@ import styled from "styled-components";
 //NavBar
 const Wrapper = styled.div`
     background: #202C33;
-    padding: 10px 20px;
+    padding: 0px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    align-content:center;
 `;
 
 const Left = styled.div`
@@ -23,8 +24,7 @@ const Center = styled.div`
 `;
 
 const Logo = styled.h1`
-    font-weight: bold;
-    font-size: 35px;
+    height:120px;
 `;
 
 const Right = styled.div`
@@ -44,8 +44,8 @@ const MenuItem = styled.div`
 //ItemCount
 const ProductAmountContainer = styled.div`
     display: flex;
-    align-items: center;
-    margin: 20px;
+    // flex-direction:column;
+    margin: 20px 0px;
 `;
 
 const ProductAmount = styled.div`
@@ -70,7 +70,7 @@ const Info = styled.div`
     position: absolute;
     top: 0px;
     left: 0px;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.25);
     z-index: 3;
     diplay: flex;
     align-items: center;
@@ -86,7 +86,7 @@ const ProductContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f5fbfd;
+    background-color: #F4FCFF;
     position: relative;
     &:hover ${Info}{
         opacity: 1;
@@ -94,10 +94,10 @@ const ProductContainer = styled.div`
 `;
 
 const Circle = styled.div`
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
-    background-color: white;
+    background-color: transparent;
     position: absolute;
 `;
 
@@ -125,36 +125,37 @@ const Icon = styled.div`
 
 //ItemDetail
 const DetailContainer = styled.div`
-
 `;
 
 const WrapperDetail = styled.div`
-    padding: 50px;
+    padding: 10px 50px;
     display: flex;
 `;
 
 const ImgContainer = styled.div`
     flex: 1;
-
+    padding-left:50px;
 `;
 
 const ImageDetail = styled.img`
-    width: 100%;
-    height: 90vh;
+    max-width: 500px;
+    max-height: 500px;
     object-fit: cover;
 `;
 
 const InfoContainer = styled.div`
     flex: 1;
-    padding: 0px 50px;
+    padding: 50px;
 `;
 
 const Title = styled.h1`
-    font-weight: 200;
+    font-weight: 50px;
+    font-size:50px;
 `;
 
 const Desc = styled.p`
     margin: 20px 0px;
+    font-size:20px;
 `;
 
 const Price  = styled.span`
@@ -200,7 +201,7 @@ const Details = styled.div`
 `;
 
 const PriceDetail = styled.div`
-  flex: 1;
+  flex: 3;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -209,7 +210,8 @@ const PriceDetail = styled.div`
 
 const ProductPrice = styled.div`
   font-size: 30px;
-  font-weight: 200;
+  font-weight: 400;
+  color: darkblue;
 `;
 
 export { 

@@ -7,8 +7,9 @@ import { ContentCart, Details, ImageCart, PriceDetail, Product, ProductAmount, P
 const Top = styled.div`
   display: flex;
   align-items: center;
+  align-content: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 20px 3px;
 `;
 
 const TopButton = styled.button`
@@ -41,11 +42,12 @@ const Summary = styled.div`
   border: 0.5px solid lightgray;
   border-radius: 10px;
   padding: 20px;
-  height: 50vh;
+  height: 45vh;
 `;
 
 const SummaryTitle = styled.h1`
   font-weight: 200;
+  text-align:center;
 `;
 
 const SummaryItem = styled.div`
@@ -69,7 +71,7 @@ const Button = styled.button`
 `;
 
 const FormatNumber = ({number}) => {
-    return <span>{new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(number)}</span>
+    return <span>{new Intl.NumberFormat('en-US', { style: 'currency', currency: 'EUR' }).format(number)}</span>
 }
 
 const Cart =()=> {
@@ -104,11 +106,10 @@ const Cart =()=> {
                             </ProductDetail>
                             <PriceDetail>
                                 <ProductAmountContainer>
-                                <ProductAmount>{item.qtyItem} item(s)</ProductAmount>
-                                /
-                                <ProductAmount>$ {item.costItem} each</ProductAmount>
+                                <ProductAmount>{item.qtyItem} item (s)  /</ProductAmount>
+                                <ProductAmount>€ {item.costItem} each</ProductAmount>
                                 </ProductAmountContainer>
-                                <ProductPrice>$ {test.calcTotalPerItem(item.idItem)} </ProductPrice>
+                                <ProductPrice>Total € {test.calcTotalPerItem(item.idItem)} </ProductPrice>
                             </PriceDetail>
                             </Product>
                             )
@@ -123,11 +124,11 @@ const Cart =()=> {
                                 <SummaryItemPrice><FormatNumber number={test.calcSubTotal()} /></SummaryItemPrice>
                             </SummaryItem>
                             <SummaryItem>
-                                <SummaryItemText>Taxes</SummaryItemText>
+                                <SummaryItemText>VAT (21%)</SummaryItemText>
                                 <SummaryItemPrice><FormatNumber number={test.calcTaxes()} /></SummaryItemPrice>
                             </SummaryItem>
                             <SummaryItem>
-                                <SummaryItemText>Taxes Discount</SummaryItemText>
+                                <SummaryItemText>VAT Discount</SummaryItemText>
                                 <SummaryItemPrice><FormatNumber number={-test.calcTaxes()} /></SummaryItemPrice>
                             </SummaryItem>
                             <SummaryItem type="total">
