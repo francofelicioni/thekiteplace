@@ -11,9 +11,9 @@ const NavBar = () => {
                     <Link to='/' style={{textDecoration: "none", color: "white"}}><img style={{height:70, width:200}} src="https://firebasestorage.googleapis.com/v0/b/kiteplace.appspot.com/o/logo.png?alt=media&token=61cc2e18-278c-4a80-83cc-a0362e3b04e4" alt="Logo" /></Link>
                 </Left>
                 <Center>
-                    <Link to='/category/1' style={{textDecoration: "none", color: "white"}}><MenuItem>Kites</MenuItem></Link>
-                    <Link to='/category/2' style={{textDecoration: "none", color: "white"}}><MenuItem>Boards</MenuItem></Link>
-                    <Link to='/category/3' style={{textDecoration: "none", color: "white"}}><MenuItem>Foils</MenuItem></Link>                    
+                    <Link to='/category/kites' style={{textDecoration: "none", color: "white"}}><MenuItem>Kites</MenuItem></Link>
+                    <Link to='/category/boards' style={{textDecoration: "none", color: "white"}}><MenuItem>Boards</MenuItem></Link>
+                    <Link to='/category/foils' style={{textDecoration: "none", color: "white"}}><MenuItem>Foils</MenuItem></Link>                    
                 </Center>
                 <Right>
                     <MenuItem><Link to='/cart' style={{textDecoration: "none", color: "white"}}><CartWidget /></Link></MenuItem>
