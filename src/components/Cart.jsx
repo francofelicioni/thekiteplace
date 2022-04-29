@@ -1,8 +1,10 @@
+import { collection, doc, setDoc, serverTimestamp, updateDoc, increment } from "firebase/firestore";
+import db from '../utils/firebaseConfig';
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { CartContext } from "./CartContext";
-import { ContentCart, Details, ImageCart, PriceDetail, Product, ProductAmount, ProductAmountContainer, ProductDetail, ProductPrice, TitleCart, WrapperCart } from "./styledComponents";
+import { ContentCart, Details, ImageCart, Price, PriceDetail, Product, ProductAmount, ProductAmountContainer, ProductDetail, ProductPrice, TitleCart, WrapperCart } from "./styledComponents";
 
 const Top = styled.div`
   display: flex;
@@ -77,6 +79,44 @@ const FormatNumber = ({number}) => {
 const Cart =()=> {
     const test = useContext(CartContext);
 
+    const checkout = ()=> {
+    
+        test.cartList.forEach(async (item) => {
+            const itemRef = doc(db, "products", item.idItem);
+            await updateDoc(itemRef, {
+              stock: increment(-item.qtyItem)
+            });
+          });
+
+        let order = {
+            buyer: {
+                name: "Jose Manuel Alonso Serafin",
+                email: "josealonso@gmail.com",
+                phone: "1164717157"
+            },
+            date: serverTimestamp(),
+            items: test.cartList.map (item => ({
+                id: item.idItem,
+                title: item.nameItem,
+                price: item.costItem,
+                qty: item.qtyItem
+            })),
+            total: test.calcTotal(),
+        }
+        console.log(order);
+
+        const createFirestoreOrder = async () => {
+            const newOrderRef = doc(collection(db, "orders"));
+            await setDoc(newOrderRef, order);
+            return newOrderRef;
+        }
+
+        createFirestoreOrder()
+            .then (result => alert('Your order is confirmed. This is the number of your purchase. \n\n\n Order number: ' + result.id + '\n\n'))
+            .catch(err => console.log(err));
+        test.removeList();
+    }
+
     return(
         <WrapperCart>
             <TitleCart>YOUR CART</TitleCart>
@@ -135,7 +175,7 @@ const Cart =()=> {
                                 <SummaryItemText>Total</SummaryItemText>
                                 <SummaryItemPrice><FormatNumber number={test.calcTotal()} /></SummaryItemPrice>
                             </SummaryItem>
-                            <Button>CHECKOUT NOW</Button>
+                            <Button onClick={checkout}>CHECKOUT NOW</Button>
                         </Summary>
                 }
             </Bottom>
