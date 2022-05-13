@@ -1,6 +1,5 @@
-import { query, orderBy, where, collection, getDocs } from '@firebase/firestore';
-import { doc, getDoc } from "firebase/firestore";
-import db from './firebaseConfig';
+import { collection, doc, getDoc, getDocs, orderBy, query, where } from "firebase/firestore";
+import db from "./firebaseConfig";
 
 export const firestoreFetch = async (idCategory) => {
     let q;
@@ -30,4 +29,4 @@ export const firestoreFetchOne = async (idItem) => {
       // doc.data() will be undefined in this case
       console.log("No such document!");
     }
-}
+} 

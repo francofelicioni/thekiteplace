@@ -1,26 +1,37 @@
-import { AppBar } from "@material-ui/core";
 import { Link } from "react-router-dom";
-import CartWidget from "./CartWidget";
-import { Wrapper, Logo, MenuItem, Left, Center, Right } from './styledComponents';
+import { NavContainer, Center, Left, MenuItem, Right } from '../styles/Navbar_sc';
+import CartWidget from './CartWidget';
+import BurgerBtn from "./BurgerBtn";
+import { useState } from "react";
 
-const NavBar = () => {
+const Navbar = () => {
+    const [clicked, setClicked] = useState(false);
+    const handleClick = ()=>{
+        setClicked(!clicked)
+    }
+
     return (
-        <AppBar position="relative">
-            <Wrapper>
+        <>
+            <NavContainer>
                 <Left>
-                    <Link to='/' style={{textDecoration: "none", color: "white"}}><img style={{height:70, width:200}} src="https://firebasestorage.googleapis.com/v0/b/kiteplace.appspot.com/o/logo.png?alt=media&token=61cc2e18-278c-4a80-83cc-a0362e3b04e4" alt="Logo" /></Link>
+                    <Link className="logo" to="/"><img style={{height: 70, width:200}} src="https://firebasestorage.googleapis.com/v0/b/kiteplace.appspot.com/o/logo.png?alt=media&token=6527fef0-426b-4a9d-85ca-e3931396f889" alt="Logo Web"/></Link> 
+                    <Link className="logo-responsive" to="/"><img style={{height: 100, width:120}} src="https://firebasestorage.googleapis.com/v0/b/kiteplace.appspot.com/o/logofinal.png?alt=media&token=c5649519-a013-4ca4-ac07-91d84c9a063f" alt="Logo Web"/></Link>
                 </Left>
                 <Center>
-                    <Link to='/category/kites' style={{textDecoration: "none", color: "white"}}><MenuItem>Kites</MenuItem></Link>
-                    <Link to='/category/boards' style={{textDecoration: "none", color: "white"}}><MenuItem>Boards</MenuItem></Link>
-                    <Link to='/category/foils' style={{textDecoration: "none", color: "white"}}><MenuItem>Foils</MenuItem></Link>                    
-                </Center>
+                    <div className={`links ${clicked ? 'active' : ''}`}>
+                        <Link to='/category/kites' style={{textDecoration: "none", color: "white"}}><a>Kites</a></Link>
+                        <Link to='/category/boards' style={{textDecoration: "none", color: "white"}}><a>Boards</a></Link>
+                        <Link to='/category/foils' style={{textDecoration: "none", color: "white"}}><a>Foils</a></Link>
+                    </div>
+                    <div className="burger">
+                        <BurgerBtn clicked={clicked} handleClick={handleClick} />
+                    </div> 
+                </Center>  
                 <Right>
-                    <MenuItem><Link to='/cart' style={{textDecoration: "none", color: "white"}}><CartWidget /></Link></MenuItem>
+                    <Link to='/cart' style={{textDecoration: "none", color: "white"}}><MenuItem><CartWidget/></MenuItem></Link>
                 </Right>
-            </Wrapper>
-        </AppBar>
-    );
+            </NavContainer>
+        </>
+    )
 }
-
-export default NavBar;
+export default Navbar;

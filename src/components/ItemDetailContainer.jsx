@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import ItemDetail from "./ItemDetail";
 import { firestoreFetchOne } from "../utils/firestoreFetch";
 
+
 const ItemDetailContainer = () => {
     const [data, setData] = useState({});
     const { idItem } = useParams();
