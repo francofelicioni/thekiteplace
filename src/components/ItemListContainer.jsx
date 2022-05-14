@@ -40,7 +40,6 @@ const ItemListContainer = () => {
                     <ItemList items={data} />
                 </>
             );
-        
     } else {
         return (
             <>

@@ -2,68 +2,70 @@ import styled from "styled-components";
 import { mobile } from "../utils/responsive";
 
 const Container = styled.div`
-display: flex;
-background: #f4f4f4;
-@media(max-width: 767px) {
-  flex-direction: column;
-}
+    display: flex;
+    background: #f4f4f4;
+    @media(max-width: 767px) {
+    flex-direction: column;
+    }
 `;
 
 const Left = styled.div`
-flex: 1;
-display: flex;
-flex-direction: column;
-padding: 0 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
 `;
 
 const Desc = styled.p`
-// margin: 00px 0;
-padding: 1rem 0;
+    padding: 1rem 0;
 `;
 
 const SocialContainer = styled.div`
-display: flex;
-cursor:pointer;
-
+    display: flex;
+    cursor:pointer;
 `;
 
 const SocialIcon = styled.div`
-width: 40px;
-height: 40px;
-border-radius: 50%;
-color: white;
-background-color: #${(props) => props.color};
-display: flex;
-align-items: center;
-justify-content: center;
-margin-right: 20px;
-cursor:pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    background-color: #${(props) => props.color};
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin-right: 20px;
+    cursor:pointer;
 `;
 
 const Center = styled.div`
-flex: 1;
-padding: 35px 20px;
-   @media(max-width: 1000px) {
-    display:none;
-  } 
+    flex: 1;
+    padding: 35px 20px;
+    @media(max-width: 1000px) {
+        display:none;
+    } 
 `;
 
 const Title = styled.h3`
-margin-bottom: 30px;
+    margin-bottom: 30px;
 `;
 
 const List = styled.ul`
-margin: 0;
-padding: 0;
-list-style: none;
-display: flex;
-// flex-direction:column;
-flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    max-height:150px;
 `;
 
 const ListItem = styled.li`
-width: 50%;
-margin-top: 10px;
+    width: 50%;
+    margin-top: 10px;
 `;
 
 const Right = styled.div`

@@ -8,12 +8,14 @@ import ItemDetailContainer from "../components/ItemDetailContainer";
 import ItemListContainer from "../components/ItemListContainer";
 import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
+import ScrollToTop from "../components/ScrollToTop";
 
 
         function Home() {
           return (
               <CartContextProvider>
               <BrowserRouter>
+              <ScrollToTop />
                   <Announcement/>
                   <Navbar/>
                   <Routes>

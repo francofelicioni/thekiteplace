@@ -8,7 +8,7 @@ const CategoryItem = ({ item }) => {
       <Image src={item.img} />
       <Info>
         <Title>{item.title}</Title>
-        <Link  to='/category/kites' style={{textDecoration: "none"}}><Button>SHOP NOW</Button></Link>
+        <Link to={`/category/${item.category}`} style={{textDecoration: "none"}}><Button>SHOP NOW</Button></Link>
       </Info>
     </Container>
   );

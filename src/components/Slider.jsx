@@ -2,6 +2,7 @@ import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
 import { useState } from "react";
 import { sliderItems } from "../utils/data";
 import { Container, Arrow, Wrapper, Slide, ImgContainer, Image, InfoContainer, Title, Desc, Button  } from '../styles/Slider_sc';
+import { Link } from "react-router-dom";
 
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -13,13 +14,16 @@ const Slider = () => {
     }
   };
 
+  
   return (
     <Container>
       <Arrow direction="left" onClick={() => handleClick("left")}>
         <ArrowLeftOutlined />
       </Arrow>
       <Wrapper slideIndex={slideIndex}>
+        
         {sliderItems.map((item) => (
+          console.log(item.category),
           <Slide bg={item.bg} key={item.id}>
             <ImgContainer>
               <Image src={item.img} />
@@ -27,7 +31,7 @@ const Slider = () => {
             <InfoContainer>
               <Title>{item.title}</Title>
               <Desc>{item.desc}</Desc>
-              <Button>EXPLORE</Button>
+              <Link to={`/category/${item.category}`}style={{textDecoration: "none", color: "black"}}><Button>EXPLORE</Button></Link>
             </InfoContainer>
           </Slide>
         ))}

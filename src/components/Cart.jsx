@@ -38,8 +38,7 @@ const Cart =()=> {
             })),
             total: test.calcTotal(),
         }
-        console.log(order);
-
+        
         const createFirestoreOrder = async () => {
             const newOrderRef = doc(collection(db, "orders"));
             await setDoc(newOrderRef, order);

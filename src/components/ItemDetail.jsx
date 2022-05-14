@@ -17,8 +17,7 @@ const ContainerPpal = styled.div`
     align-items: center;
     justify-content: space-around;
     padding:50px;
-`;
- */
+`;*/
 
 const ItemDetail = ({ item }) => {
     const [itemCount, setItemCount] = useState(0);
@@ -31,7 +30,6 @@ const ItemDetail = ({ item }) => {
             icon: 'success',
             confirmButtonText: 'Close'
         })
-        // alert("You have selected " + qty + " items.");
         setItemCount(qty);
         test.addToCart(item, qty);
     }

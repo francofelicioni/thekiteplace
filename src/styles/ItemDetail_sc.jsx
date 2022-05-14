@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const DetailContainer = styled.div`
     height:90vh;
-
     @media(max-width: 768px) {
         height:100%;
     }
@@ -97,7 +96,6 @@ const Desc = styled.p`
 `;
 
 const Units = styled.p`
-    // text-align:center;
     margin: 20px 0px;
     font-size:1.2rem;
     font-weight: bold;

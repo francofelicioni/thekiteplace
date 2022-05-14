@@ -25,14 +25,13 @@ const Footer = () => {
       <Center>
         <Title>Useful Links</Title>
         <List>
-          <ListItem>Home</ListItem>
-          <ListItem>Kites</ListItem>
+          <Link to='/category/kites' style={{textDecoration: "none", color: "black"}}><ListItem>Kites</ListItem></Link>
+          <Link to='/category/boards' style={{textDecoration: "none", color: "black"}}><ListItem>Boards</ListItem></Link>
+          <Link to='/category/foils' style={{textDecoration: "none", color: "black"}}><ListItem>Foils</ListItem></Link>
+          <Link to='/cart' style={{textDecoration: "none", color: "black"}}><ListItem>Cart</ListItem></Link>
           <ListItem>My Account</ListItem>
-          <ListItem>Foils</ListItem>
           <ListItem>Order Tracking</ListItem>
-          <ListItem>Boards</ListItem>
           <ListItem>Wishlist</ListItem>
-          <ListItem>Cart</ListItem>
           <ListItem>Terms</ListItem>
         </List>
       </Center>
