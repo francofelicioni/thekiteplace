@@ -1,6 +1,8 @@
 THE KITE PLACE
 
-THE KITE PLACE es un E-commerce responsive que permite la compra de kites, tablas y foils. Esta basado en el framework Bootstrap 5.0 y fue desarrollado con React Js, JavaScript, CSS3 y HTML5.
+THE KITE PLACE es un E-commerce responsive que fue realizado como proyecto final para mi carrera como desarrollador front end. Lo realicé combinando mi gran pasión que es el kitesurf, con todas mis ganas de aprender y seguir avanzando en este hermoso mundo de la programacion y simula una tienda que permite la compra de kites, tablas y foils. 
+
+👉 Lo hice Esta basado en el framework Bootstrap 5.0 y fue desarrollado con React Js, JavaScript, CSS3 y HTML5.
 
 El proyecto se encuenta en desarrollo y cuenta con:
 
@@ -26,12 +28,10 @@ Construido con 🛠️
 Las herramientas utilizadas para el desarrollo del proyecto son las siguientes:
 
 React Js - La libreria de Js utilizada en el desarrollo
-Bootstrap - Framework front-end utilizado para desarrollar aplicaciones web y sitios mobile first
 NodeJs - Manejador de dependencias
-Fontawesome - Framework de iconos vectoriales y estilos css
 Sweet Alert 2 - Libreria para crear ventanas emergentes personalizadas.
-Material Icons -
-
+Material Icons - Plataforma ubicada en la nube que usa un conjunto de herramientas para la creación y sincronización de proyectos.
+Styled Components - Librería para inyectar CSS en JavaScript. 
 
 Autor ✒️
 El proyecto fue realizado por:
