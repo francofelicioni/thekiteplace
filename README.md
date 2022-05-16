@@ -34,6 +34,8 @@ Las herramientas utilizadas para el desarrollo del proyecto son las siguientes:
 <h5>•Material Icons - Plataforma ubicada en la nube que usa un conjunto de herramientas para la creación y sincronización de proyectos. </h3>
 <h5>•Styled Components - Librería para inyectar CSS en JavaScript. </h3>
 
+![TheKitePlace](https://user-images.githubusercontent.com/95261679/168515552-899c259a-0f2b-4e0e-ad36-977b01e3c636.gif)
+
 <h2>Autor ✒️ </h2>
 El proyecto fue realizado por:
 
