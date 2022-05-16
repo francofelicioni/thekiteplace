@@ -1,3 +1,5 @@
+THE KITE PLACE
+
 THE KITE PLACE es un E-commerce responsive que permite la compra de kites, tablas y foils. Esta basado en el framework Bootstrap 5.0 y fue desarrollado con React Js, JavaScript, CSS3 y HTML5.
 
 El proyecto se encuenta en desarrollo y cuenta con:
