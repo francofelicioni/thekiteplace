@@ -1,17 +1,17 @@
 import styled from "styled-components";
 
 const Info = styled.div`
+    position: absolute;
+    /* top: 0px;
+    left: 0px; */
+    display: flex;
     opacity: 0;
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
     background-color: rgba(0, 0, 0, 0.25);
     z-index: 3;
-    diplay: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     transition: all 1s ease;
 `;
 
@@ -20,7 +20,7 @@ const ProductContainer = styled.div`
     border: 2px solid #f4f4f4;
     flex: 1;
     margin: 25px;
-    max-width: 280px;
+    max-width: 320px;
     height: 350px;
     display: flex;
     align-items: center;
@@ -32,9 +32,7 @@ const ProductContainer = styled.div`
     }
 
     @media(max-width: 768px) {
-        // flex-direction:column;
         justify-content: center;
-        // margin: 5px;
     }
 `;
 
@@ -53,19 +51,18 @@ const Image = styled.img`
 
 const Icon = styled.div`
     border: 2px solid #B03A60;
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px;
     transition: all 0.5s ease;
 
     &:hover {
     background-color: #e9f5f5;
-        transform: scale(1.2);
+        transform: scale(1.15);
     }
 `;
 

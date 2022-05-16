@@ -40,7 +40,7 @@ const Button = styled.a`
   background-color: white;
   cursor: pointer;
   // color: #242429;
-  border: 2px solid #white;
+  border: 2px solid white;
 `;
 
 export {

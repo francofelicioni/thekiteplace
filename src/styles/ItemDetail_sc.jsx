@@ -17,9 +17,7 @@ const WrapperDetail = styled.div`
         flex-direction: column;
         justify-content:space-between;
     }
-}
-
-`;
+`
 
 const ImgContainer = styled.div`
     flex:1;
@@ -38,7 +36,6 @@ const ImageDetail = styled.img`
     @media(max-width: 768px) {
         width: 200px;
         height: 200px;
-        // object-fit: cover;
     }
 
 `;
@@ -68,21 +65,17 @@ const PriceContainer = styled.div`
 `;
 
 const Title = styled.h1`
-    // text-align:center;
     font-weight: 50px;
     font-size:3.5rem;
 
     @media(max-width: 1000px) {
             font-size: 2.5rem;
-        }
     }
 `;
 
 const Desc = styled.p`
-    // text-align:center;
     margin: 20px 0px;
     font-size:1.2rem;
-    // font-weight: bold;
 
     @media(max-width: 768px) {
         width: 80vw;
@@ -91,7 +84,6 @@ const Desc = styled.p`
         font-size:1rem;
         text-align:center;
         padding:1em;
-        // font-weight: bold;
     }
 `;
 

@@ -5,7 +5,6 @@ const ProductsContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    // min-height:80vh;
 
     @media(max-width: 767px) {
         padding: 1% 10px;
