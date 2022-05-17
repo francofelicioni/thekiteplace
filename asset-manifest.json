@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/thekiteplace/static/js/main.fb441662.chunk.js",
-    "main.js.map": "/thekiteplace/static/js/main.fb441662.chunk.js.map",
+    "main.js": "/thekiteplace/static/js/main.817b1413.chunk.js",
+    "main.js.map": "/thekiteplace/static/js/main.817b1413.chunk.js.map",
     "runtime-main.js": "/thekiteplace/static/js/runtime-main.aa14e027.js",
     "runtime-main.js.map": "/thekiteplace/static/js/runtime-main.aa14e027.js.map",
-    "static/js/2.a647839a.chunk.js": "/thekiteplace/static/js/2.a647839a.chunk.js",
-    "static/js/2.a647839a.chunk.js.map": "/thekiteplace/static/js/2.a647839a.chunk.js.map",
+    "static/js/2.358f5b12.chunk.js": "/thekiteplace/static/js/2.358f5b12.chunk.js",
+    "static/js/2.358f5b12.chunk.js.map": "/thekiteplace/static/js/2.358f5b12.chunk.js.map",
     "index.html": "/thekiteplace/index.html",
-    "static/js/2.a647839a.chunk.js.LICENSE.txt": "/thekiteplace/static/js/2.a647839a.chunk.js.LICENSE.txt"
+    "static/js/2.358f5b12.chunk.js.LICENSE.txt": "/thekiteplace/static/js/2.358f5b12.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.aa14e027.js",
-    "static/js/2.a647839a.chunk.js",
-    "static/js/main.fb441662.chunk.js"
+    "static/js/2.358f5b12.chunk.js",
+    "static/js/main.817b1413.chunk.js"
   ]
 }
