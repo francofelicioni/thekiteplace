@@ -14,6 +14,27 @@ const FormatNumber = ({number}) => {
 const Cart =()=> {
     const test = useContext(CartContext);
 
+    const deleteConfirmation = () => {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "All products will be deleted!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire(
+                'Deleted!',
+                'Your cart is empty.',
+                'success'
+                )
+                test.removeList();
+            }
+          })
+    }
+
     const checkout = ()=> {
     
         test.cartList.forEach(async (item) => {
@@ -64,7 +85,7 @@ const Cart =()=> {
                 <Link to='/'><TopButton>CONTINUE SHOPPING</TopButton></Link>
                 {
                     (test.cartList.length > 0)
-                    ? <TopButton type="filled" onClick={test.removeList}>DELETE ALL PRODUCTS</TopButton>
+                    ? <TopButton type="filled" onClick={deleteConfirmation}>DELETE ALL PRODUCTS</TopButton>
                     : <TopText>Your cart is empty 🛒</TopText>
                 }
             </Top>
